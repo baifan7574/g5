@@ -37,6 +37,19 @@ def find_latest_images(folder, count=4):
     images.sort(key=lambda x: x[1], reverse=True)
     return [img[0] for img in images[:count]]
 
+# ✅ 新增：自动生成描述与正文
+def generate_description(keyword):
+    return f"{keyword.capitalize()} themed portrait showcasing unique visual storytelling. Explore how this image captures emotion, light, and style in a way that appeals to refined visual taste and aesthetic appreciation."
+
+def generate_paragraph(keyword):
+    return (
+        f"This portrait illustrates the essence of {keyword}, blending atmosphere, style, and emotional depth. "
+        f"Whether you're a fan of {keyword} inspired photography or simply exploring visual narratives, "
+        f"this image offers a glimpse into a world of curated aesthetics. It balances composition, mood, and detail "
+        f"to create a memorable visual experience. Keywords like '{keyword}' often attract those who value uniqueness, "
+        f"sophistication, and subtle beauty in digital galleries and modern photography portfolios."
+    )
+
 def generate_category_blocks(category_root="."):
     html_blocks = ""
     for folder in sorted(os.listdir(category_root)):
@@ -96,12 +109,34 @@ def generate_pages():
                 for idx, img_path in enumerate(imgs):
                     name = img_path.stem
                     html_file = folder / f'{name}.html'
-                    kw = keywords[start+idx] if start+idx < len(keywords) else ''
+                    kw = keywords[start+idx] if start+idx < len(keywords) else cat
+                    html = f"""<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <title>{kw}</title>
+  <meta name="description" content="{generate_description(kw)}">
+  <meta name="keywords" content="{kw}">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    body {{ font-family: Arial, sans-serif; text-align: center; background-color: #f5f5f5; color: #333; }}
+    img {{ max-width: 100%; height: auto; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.1); }}
+    .container {{ max-width: 800px; margin: 20px auto; padding: 20px; background: white; border-radius: 10px; }}
+    p {{ font-size: 16px; line-height: 1.6; text-align: left; }}
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>{kw}</h1>
+    <img src="{img_path.name}" alt="{kw}">
+    <p>{generate_paragraph(kw)}</p>
+    <div><a href="page{page+1}.html">Back to List</a> | <a href="../index.html">Home</a></div>
+  </div>
+</body>
+</html>
+"""
                     with open(html_file, 'w', encoding='utf-8') as imgf:
-                        imgf.write(f'<html><head><title>{kw}</title><meta name="description" content="{kw}"></head><body>')
-                        imgf.write(f'<h1>{kw}</h1><img src="{img_path.name}" alt="{kw}" style="max-width:100%"/><br>')
-                        imgf.write(f'<div><a href="page{page+1}.html">Back to List</a> | <a href="../index.html">Home</a></div>')
-                        imgf.write('</body></html>')
+                        imgf.write(html)
                     soup = BeautifulSoup(open(html_file, encoding='utf-8'), 'html.parser')
                     insert_ads(soup)
                     with open(html_file, 'w', encoding='utf-8') as imgf:
