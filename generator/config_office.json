@@ -1,0 +1,21 @@
+{
+  "model": "realisticVisionV60B1_v51HyperVAE",
+  "lora": "",
+  "width": 512,
+  "height": 768,
+  "steps": 20,
+  "cfg_scale": 7,
+  "sampler_index": "DPM++ 2M",
+  "hires_fix": true,
+  "hires_upscaler": "Latent",
+  "hires_scale": 1.5,
+  "hires_denoising_strength": 0.55,
+  "refiner": false,
+  "batch_size":20,
+  "total_images": 50,
+  "seed": -1,
+  "prompt": "sexy elegant woman in semi-unbuttoned white blouse and skirt, sitting on office desk, high heels, crossed legs, confident expression, moody cinematic lighting, modern executive vibe, ultra realistic photo",
+  "negative_prompt": "blur, distortion, nsfw, cartoon, exaggerated body, watermark, incorrect posture",
+  "output_dir": "../office",
+  "category": "office"
+}
