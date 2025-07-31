@@ -1,8 +1,9 @@
 {
-  "site_name": "g5.gogamefun.com",
+  "site_name": "Gentleman's Frame",
+  "domain": "https://g5.gogamefun.com",
   "ad_network": "Monetag",
   "ads_code": [
-    "<script>(function(s,u,z,p){s.src=u,s.setAttribute('data-zone',z),s.async=true,p.parentNode.insertBefore(s,p)})(document.createElement('script'),'https://s.monetag.com/21d4cf52f964e42b29da272d65a2cb49.js',9634259,document.getElementsByTagName('script')[0])</script>",
-    "<script>(function(s,u,z,p){s.src=u,s.setAttribute('data-zone',z),s.async=true,p.parentNode.insertBefore(s,p)})(document.createElement('script'),'https://s.monetag.com/21d4cf52f964e42b29da272d65a2cb49.js',9634257,document.getElementsByTagName('script')[0])</script>"
+    "<script>(function(s,u,z,p){s.src=u,s.setAttribute('data-zone',z),s.async=true,p.parentNode.insertBefore(s,p)})(document.createElement('script'),'https://s.monetag.com/xxx.js',11111,document.getElementsByTagName('script')[0])</script>",
+    "<script>(function(s,u,z,p){s.src=u,s.setAttribute('data-zone',z),s.async=true,p.parentNode.insertBefore(s,p)})(document.createElement('script'),'https://s.monetag.com/xxx.js',22222,document.getElementsByTagName('script')[0])</script>"
   ]
 }
