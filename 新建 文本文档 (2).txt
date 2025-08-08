@@ -1,0 +1,18 @@
+@echo off
+chcp 65001 >nul
+echo 🔄 执行所有网站构建任务中，请稍候...
+
+echo ========== 🟢 处理 g5 ==========
+cd /d D:\项目\g5
+call run_all_workflow.bat
+
+echo ========== 🟢 处理 g6 ==========
+cd /d D:\项目\g6
+call run_all_workflow.bat
+
+echo ========== 🟢 处理 g7 ==========
+cd /d D:\项目\g7
+call run_all_workflow.bat
+
+echo ✅ 所有网站处理完毕！
+pause

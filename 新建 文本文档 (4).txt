@@ -1,0 +1,38 @@
+import os
+import datetime
+import subprocess
+
+def auto_git_push():
+    try:
+        # 当前目录
+        repo_path = os.path.dirname(os.path.abspath(__file__))
+        os.chdir(repo_path)
+
+        # 获取当前时间作为提交信息
+        now = datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S")
+        commit_msg = f"Auto update at {now}"
+
+        # Git 命令列表
+        cmds = [
+            ["git", "add", "."],
+            ["git", "commit", "-m", commit_msg],
+            ["git", "push"]
+        ]
+
+        # 顺序执行
+        for cmd in cmds:
+            result = subprocess.run(cmd, capture_output=True, text=True)
+            if result.returncode != 0:
+                print(f"❌ 命令执行失败：{' '.join(cmd)}")
+                print(result.stderr)
+                return
+            else:
+                print(f"✅ 成功执行：{' '.join(cmd)}")
+
+        print("🎉 已自动提交并推送到 GitHub！")
+
+    except Exception as e:
+        print("❌ 发生异常：", e)
+
+if __name__ == "__main__":
+    auto_git_push()
