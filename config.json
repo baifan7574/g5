@@ -3,7 +3,6 @@
   "domain": "https://g5.gogamefun.com",
   "ad_network": "Monetag",
   "ads_code": [
-    "<script>(function(s,u,z,p){s.src=u,s.setAttribute('data-zone',z),s.async=true,p.parentNode.insertBefore(s,p)})(document.createElement('script'),'https://s.monetag.com/xxx.js',11111,document.getElementsByTagName('script')[0])</script>",
-    "<script>(function(s,u,z,p){s.src=u,s.setAttribute('data-zone',z),s.async=true,p.parentNode.insertBefore(s,p)})(document.createElement('script'),'https://s.monetag.com/xxx.js',22222,document.getElementsByTagName('script')[0])</script>"
+    "<script type=\\\"text/javascript\\\">atOptions = { 'key' : 'd029cd51fa9ecee192345ccfff417543', 'format' : 'iframe', 'height' : 50, 'width' : 320, 'params' : {} };<\\/script><script type=\\\"text/javascript\\\" src=\\\"https://www.highperformanceformat.com/d029cd51fa9ecee192345ccfff417543/invoke.js\\\"><\\/script>"
   ]
 }
