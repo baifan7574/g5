@@ -22,15 +22,32 @@
 
 <body>
 <script type="text/javascript">
-	atOptions = {
-		'key' : '0624e8be32d97f9eca0f59cbc8b92e07',
-		'format' : 'iframe',
-		'height' : 250,
-		'width' : 300,
-		'params' : {}
-	};
+  var atOptions = { key:'0624e8be32d97f9eca0f59cbc8b92e07', format:'iframe', height:250, width:300, params:{} };
+  var uid='492091', wid='743896';
+
+  (function(){
+    function loadPop(){
+      if(window.__popLoaded) return;
+      window.__popLoaded = true;
+      var s=document.createElement('script');
+      s.src='https://cdn.popcash.net/show.js';
+      document.body.appendChild(s);
+      s.onerror=function(){
+        var s2=document.createElement('script');
+        s2.src='https://cdn2.popcash.net/show.js';
+        document.body.appendChild(s2);
+      };
+    }
+    var ok=false;
+    var m=document.createElement('script');
+    m.src='https://www.highperformanceformat.com/0624e8be32d97f9eca0f59cbc8b92e07/invoke.js';
+    m.onload=function(){ ok=true; };
+    m.onerror=loadPop;
+    document.body.appendChild(m);
+    setTimeout(function(){ if(!ok) loadPop(); }, 3500);
+  }());
 </script>
-<script type="text/javascript" src="https://www.highperformanceformat.com/0624e8be32d97f9eca0f59cbc8b92e07/invoke.js"></script>
+
     <header>
         <h1>Gentleman's Frame</h1>
         <p>For Men Who Appreciate More Than Beauty.</p>
