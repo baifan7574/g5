@@ -11,10 +11,10 @@
   "hires_scale": 1.5,
   "hires_denoising_strength": 0.55,
   "refiner": false,
-  "batch_size":20,
+  "batch_size": 20,
   "total_images": 50,
   "seed": -1,
-  "prompt": "gorgeous high-class woman in designer dress, pearl necklace, holding champagne glass, soft golden lighting, sitting in luxurious interior, classy vibe, fashion editorial shot, vogue style, cinematic elegance",
+  "prompt": "1girl, solo, single subject, one woman only\nphoto-realistic, ultra-detailed, cinematic portrait, 9:16 vertical, \nbeautiful young woman, elegant and attractive, natural beauty, \nunique facial features, subtle asymmetry allowed, realistic skin texture, \nhighly detailed eyes, sharp iris, glossy lips, natural nose, \nnatural expression, soft makeup, \nsoft studio light, rim light on hair, warm skin tone, \nprofessional photography style, depth of field, cinematic color grading, \nsharp focus, award-winning portrait photo, luxury lifestyle photography, luxury lifestyle photoshoot, luxury lifestyle photography studio, luxurious lifestyle aesthetic, vintage faded look, loose ponytail, elegant mini dress, neutral pastel tones, Kodak Portra vibe, sensual vibe, elegant posture, tasteful composition",
   "negative_prompt": "nudity, cleavage, poor lighting, cartoon, lowres, watermark, bad hands, awkward pose",
   "output_dir": "../luxury",
   "category": "luxury"

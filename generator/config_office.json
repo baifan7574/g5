@@ -11,10 +11,10 @@
   "hires_scale": 1.5,
   "hires_denoising_strength": 0.55,
   "refiner": false,
-  "batch_size":20,
+  "batch_size": 20,
   "total_images": 50,
   "seed": -1,
-  "prompt": "sexy elegant woman in semi-unbuttoned white blouse and skirt, sitting on office desk, high heels, crossed legs, confident expression, moody cinematic lighting, modern executive vibe, ultra realistic photo",
+  "prompt": "1girl, solo, single subject, one woman only\nphoto-realistic, ultra-detailed, cinematic portrait, 9:16 vertical, \nbeautiful young woman, elegant and attractive, natural beauty, \nunique facial features, subtle asymmetry allowed, realistic skin texture, \nhighly detailed eyes, sharp iris, glossy lips, natural nose, \nnatural expression, soft makeup, \nsoft studio light, rim light on hair, warm skin tone, \nprofessional photography style, depth of field, cinematic color grading, \nsharp focus, award-winning portrait photo, office female picture, office model photos, vintage faded look, dark shiny hair, elegant mini dress, neutral pastel tones, Kodak Portra vibe, sensual vibe, elegant posture, tasteful composition",
   "negative_prompt": "blur, distortion, nsfw, cartoon, exaggerated body, watermark, incorrect posture",
   "output_dir": "../office",
   "category": "office"

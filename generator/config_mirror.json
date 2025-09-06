@@ -11,10 +11,10 @@
   "hires_scale": 1.5,
   "hires_denoising_strength": 0.55,
   "refiner": false,
-  "batch_size":20,
+  "batch_size": 20,
   "total_images": 50,
   "seed": -1,
-  "prompt": "beautiful woman taking mirror selfie, perfect makeup, seductive eyes, delicate fingers holding phone, stylish outfit, natural lighting from window, cinematic reflection, subtle shadows, polished room background",
+  "prompt": "1girl, solo, single subject, one woman only\nphoto-realistic, ultra-detailed, cinematic portrait, 9:16 vertical, \nbeautiful young woman, elegant and attractive, natural beauty, \nunique facial features, subtle asymmetry allowed, realistic skin texture, \nhighly detailed eyes, sharp iris, glossy lips, natural nose, \nnatural expression, soft makeup, \nsoft studio light, rim light on hair, warm skin tone, \nprofessional photography style, depth of field, cinematic color grading, \nsharp focus, award-winning portrait photo, mirror pic style boy, how to take aesthetic mirror pics, cool film grain, glossy healthy hair, stylish romper, neutral pastel tones, Kodak Portra vibe, sensual vibe, elegant posture, tasteful composition",
   "negative_prompt": "face cropped, bad symmetry, lowres, cartoon, watermark, nude, messy room",
   "output_dir": "../mirror",
   "category": "mirror"
